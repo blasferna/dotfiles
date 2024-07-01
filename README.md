@@ -1,8 +1,5 @@
 # dotfiles
 
-
-## Requirements
-
 1. Install GNU Stow
 
 ```bash
