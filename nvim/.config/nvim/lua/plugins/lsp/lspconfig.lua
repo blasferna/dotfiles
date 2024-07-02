@@ -118,7 +118,7 @@ return {
 						},
 						python = {
 							analysis = {
-								ignore = { "*" }, -- Using Ruff
+								-- ignore = { "*" }, -- Using Ruff
 								typeCheckingMode = "off", -- Using mypy
 							},
 						},
