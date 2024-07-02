@@ -2,7 +2,7 @@ return {
 	"folke/tokyonight.nvim",
 	priority = 1000,
 	opts = {
-		transparent = false, -- change to true for transparency, it doesn't work now.
+		transparent = true, -- change to true for transparency, it doesn't work now.
 		styles = {
 			sidebars = "transparent",
 			floats = "transparent",
