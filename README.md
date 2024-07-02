@@ -1,9 +1,9 @@
 # dotfiles
 
-1. Install GNU Stow
+1. Install dependencies
 
 ```bash
-sudo apt install stow
+bash ./scripts/setup.sh
 ```
 
 2. Clone the repository and run stow
