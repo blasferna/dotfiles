@@ -37,8 +37,16 @@ return {
 		keymap.set(
 			"n",
 			"<leader>fl",
-			"<cmd>Telescope treesitter<cr>",
-			{ desc = "List functions and classes using Treesitter" }
+			"<cmd>Telescope lsp_document_symbols ignore_symbols=variable<cr>",
+			{ desc = "List functions and classes" }
 		)
+
+		keymap.set(
+			"n",
+			"<leader>fdd",
+			"<cmd>Telescope diagnostics bufnr=0<cr>",
+			{ desc = "List diagnostics for current file" }
+		)
+		keymap.set("n", "<leader>fdw", "<cmd>Telescope diagnostics<cr>", { desc = "List workspace diagnostics" })
 	end,
 }
