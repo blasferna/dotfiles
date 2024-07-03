@@ -43,6 +43,6 @@ return {
 				async = false,
 				timeout_ms = 1000,
 			})
-		end, { desc = "Organize imports" })
+		end, { desc = "Organize imports using isort" })
 	end,
 }
