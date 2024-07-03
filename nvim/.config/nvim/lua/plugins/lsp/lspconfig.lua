@@ -118,11 +118,16 @@ return {
 						},
 						python = {
 							analysis = {
-								-- ignore = { "*" }, -- Using Ruff
-								typeCheckingMode = "off", -- Using mypy
+								ignore = { "*" }, -- Using Ruff
+								-- typeCheckingMode = "off", -- Using mypy
 							},
 						},
 					},
+				})
+			end,
+			["ruff_lsp"] = function()
+				lspconfig["ruff_lsp"].setup({
+					capabilities = capabilities,
 				})
 			end,
 		})
