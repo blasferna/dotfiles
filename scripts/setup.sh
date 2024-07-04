@@ -15,3 +15,7 @@ if [[ $answer =~ ^[Yy]$ ]]; then
     source "$(dirname "$0")/python_dependencies.sh"
 fi
 
+read -p "Do you want to install git-delta? (y/n) " answer
+if [[ $answer =~ ^[Yy]$ ]]; then
+    source "$(dirname "$0")/install_git_delta.sh"
+fi
