@@ -13,5 +13,6 @@ cd ~
 git clone  https://github.com/blasferna/dotfiles.git
 cd dotfiles
 stow nvim
+stow wezterm
 ```
 
