@@ -2,7 +2,15 @@ local wezterm = require 'wezterm'
 
 local config = {}
 
-local home = os.getenv("HOME")
+local function get_home()
+  if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+    return os.getenv("USERPROFILE")
+  else
+    return os.getenv("HOME")
+  end
+end
+
+local home = get_home()
 
 if wezterm.config_builder then
   config = wezterm.config_builder()
