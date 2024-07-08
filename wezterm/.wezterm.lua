@@ -39,7 +39,7 @@ config.foreground_text_hsb = {
 config.use_fancy_tab_bar = false
 
 config.keys = {
-    { key = 'T', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
+    { key = 'F', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
     { key = 'V', mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
     { key = 'H', mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
     { key = 'X', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane { confirm = true } },
