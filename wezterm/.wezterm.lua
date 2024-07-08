@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 local config = {}
 
@@ -33,6 +34,19 @@ config.foreground_text_hsb = {
     brightness = 1.2,
     saturation = 1.1,
     hue = 1.0,
+}
+
+config.use_fancy_tab_bar = false
+
+config.keys = {
+    { key = 'T', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
+    { key = 'V', mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+    { key = 'H', mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+    { key = 'X', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane { confirm = true } },
+    { key = 'LeftArrow', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Left' },
+    { key = 'RightArrow', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Right' },
+    { key = 'UpArrow', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Up' },
+    { key = 'DownArrow', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Down' },
 }
 
 return config
