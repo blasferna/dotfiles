@@ -18,6 +18,8 @@ if wezterm.config_builder then
 end
 
 -- config.font = wezterm.font('JetBrains Mono', {weight='Thin'})
+-- TODO: get value dynamically according if there is a GPU or not.
+config.front_end = 'Software'
 
 config.hide_tab_bar_if_only_one_tab = true
 config.color_scheme = 'Tokyo Night'
@@ -40,6 +42,7 @@ config.use_fancy_tab_bar = false
 
 config.keys = {
     { key = 'F', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
+    { key = 'P', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
     { key = 'V', mods = 'CTRL|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
     { key = 'H', mods = 'CTRL|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
     { key = 'X', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane { confirm = true } },
