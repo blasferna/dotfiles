@@ -35,3 +35,10 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- listchars
+opt.listchars = {
+    space = "·",
+    tab = "» ",
+}
+
+opt.list = true -- show listchars
