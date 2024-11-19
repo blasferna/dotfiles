@@ -13,6 +13,14 @@ cd ~
 git clone  https://github.com/blasferna/dotfiles.git
 cd dotfiles
 stow nvim
+stow tmux
 stow wezterm
 ```
 
+3. Install Tmux
+
+...
+
+```
+tmux source-file ~/.tmux.conf
+```
