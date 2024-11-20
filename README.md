@@ -22,5 +22,11 @@ stow wezterm
 ...
 
 ```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 tmux source-file ~/.tmux.conf
 ```
+
+4. Open Tmux and install plugins
+
+Press `prefix` + `I` (capital i, as in **I**nstall) to fetch the plugin.
