@@ -33,7 +33,7 @@ return {
 				"tailwindcss",
 				"lua_ls",
 				"emmet_ls",
-				"ruff_lsp",
+				"ruff",
 				"pyright",
 			},
 		})
