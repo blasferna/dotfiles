@@ -20,9 +20,9 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down"
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" }) -- move selected lines up
 keymap.set("i", "<A-j>", "<ESC>:m .+1<CR>==gi", { desc = "Move current line down in insert mode" }) -- move current line down in insert mode
 keymap.set("i", "<A-k>", "<ESC>:m .-2<CR>==gi", { desc = "Move current line up in insert mode" }) -- move current line up in insert mode
--- move selected words
-keymap.set("n", "<A-h>", "viw<ESC>:m '<-2<CR>==", { desc = "Move selected word left" }) -- move selected word left
-keymap.set("n", "<A-l>", "viw<ESC>:m '>+1<CR>==", { desc = "Move selected word right" }) -- move selected word right
+-- move selected left or right
+keymap.set("v", "<", "<gv", { desc = "Move selected text left" }) -- move selected text left
+keymap.set("v", ">", ">gv", { desc = "Move selected text right" }) -- move selected text right
 
 
 -- window management
