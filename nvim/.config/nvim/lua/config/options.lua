@@ -1,6 +1,7 @@
 -- vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
+local api = vim.api
 
 opt.relativenumber = true
 opt.number = true
@@ -43,3 +44,11 @@ opt.listchars = {
 }
 
 opt.list = true -- show listchars
+
+api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  callback = function()
+    vim.wo.number = false
+    vim.wo.relativenumber = false
+  end,
+})
