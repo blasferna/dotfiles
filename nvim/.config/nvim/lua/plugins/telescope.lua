@@ -9,7 +9,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
-
+		local layout = require("telescope.actions.layout")
 		telescope.setup({
 			defaults = {
 				path_display = { "smart" },
@@ -18,8 +18,12 @@ return {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
 						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						["<C-p>"] = layout.toggle_preview,
 					},
 				},
+                preview = {
+                    hide_on_startup = true,
+                }
 			},
 			pickers = {
 				find_files = {
@@ -42,7 +46,7 @@ return {
 		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 		keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Fuzzy find git files in cwd" })
-        keymap.set("n", "<leader>fn", "<cmd>Telescope git_status<cr>", { desc = "List git new and modified files" })
+		keymap.set("n", "<leader>fn", "<cmd>Telescope git_status<cr>", { desc = "List git new and modified files" })
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 		keymap.set(
 			"n",
