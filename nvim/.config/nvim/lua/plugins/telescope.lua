@@ -21,9 +21,9 @@ return {
 						["<C-p>"] = layout.toggle_preview,
 					},
 				},
-                preview = {
-                    hide_on_startup = true,
-                }
+				preview = {
+					hide_on_startup = true,
+				},
 			},
 			pickers = {
 				find_files = {
@@ -54,7 +54,6 @@ return {
 			"<cmd>Telescope lsp_document_symbols ignore_symbols=variable<cr>",
 			{ desc = "List functions and classes" }
 		)
-
 		keymap.set(
 			"n",
 			"<leader>fdd",
