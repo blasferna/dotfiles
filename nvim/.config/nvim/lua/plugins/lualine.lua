@@ -8,7 +8,8 @@ return {
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
-				theme = "gruvbox-material",
+				-- theme = "gruvbox-material",
+				theme = "github_dark",
 				section_separators = "",
 				component_separators = "",
 			},
