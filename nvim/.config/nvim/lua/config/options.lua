@@ -55,7 +55,7 @@ api.nvim_create_autocmd("TermOpen", {
 
 -- Html
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = {"html", "htmldjango"},
+  pattern = {"html", "htmldjango", "javascript"},
   callback = function()
     vim.bo.tabstop = 2
     vim.bo.shiftwidth = 2
