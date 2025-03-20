@@ -7,6 +7,6 @@ sudo apt install stow
 sudo apt-get install build-essential
 sudo sudo apt install xclip
 
-echo "alias clip='xclip -selection clipboard'" >> ~/.bashrc
+echo "alias copy='xclip -selection clipboard'" >> ~/.bashrc
 echo "alias paste='xclip -selection clipboard -o'" >> ~/.bashrc
 source ~/.bashrc
